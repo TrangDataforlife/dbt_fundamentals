@@ -14,6 +14,8 @@ FROM
     }}
 ),
 
+
+
 customer_orders as (
 
     select

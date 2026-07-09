@@ -1,23 +1,29 @@
 models:
   - name: stg_jaffleshop_customer
+    description: each row is a unique customer
     columns:
       - name: customer_id
+        description: unique value
         data_tests:
           - unique
           - not_null
 
   - name: stg_jaffleshop_order
+    description: each row is an order 
     columns:
       - name: order_id
+        description: unique value
         data_tests:
           - unique
           - not_null
       - name: status
+        description: '{{doc("status_order")}}'
         data_tests:
           - accepted_values:
               arguments:
                 values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
       - name: customer_id
+        description: a person can buy a lot of orders leading to many customer_id in order table
         data_tests:
           - relationships:
               arguments:

@@ -1,9 +1,11 @@
 sources:
   - name : stripe
+    description: a clone source from Snowflake platform
     database : raw
     schema : stripe
     tables:
     - name : payment
+      description: each record is a payment for an order
     config:
           loaded_at_field: _batched_at
           freshness:

@@ -1,7 +1,8 @@
-Welcome to your new dbt project!
-
+Welcome to my new dbt project!
+<p align="center">
+  <img src="Lineage.JPG" width="1000" />
+</p>
 ### Using the starter project
-
 Try running the following commands:
 - dbt build
 
